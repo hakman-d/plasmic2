@@ -208,6 +208,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/website-redesign"
+        },
+        {
+          "id": "b1K69UGRvc2A",
+          "name": "Text",
+          "type": "managed",
+          "projectId": "ThhaV9C1QQJwzDebzYyXC",
+          "renderModuleFilePath": "plasmic/localhost/PlasmicText.tsx",
+          "importSpec": {
+            "modulePath": "Text.tsx"
+          },
+          "cssFilePath": "plasmic/localhost/PlasmicText.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -499,6 +512,12 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        },
+        {
+          "id": "eDMOuuYpWQ-K",
+          "name": "MuiSelect",
+          "displayName": "MuiSelect",
+          "componentImportPath": "./../components/MuiSelect"
         }
       ],
       "customFunctions": []

@@ -142,21 +142,24 @@ function PlasmicContactSection__RenderFunc(props: {
       id={"contact"}
     >
       <div className={classNames(projectcss.all, sty.freeBox__wQg16)}>
-        <h2
-          data-plasmic-name={"h2"}
-          data-plasmic-override={overrides.h2}
-          className={classNames(
-            projectcss.all,
-            projectcss.h2,
-            projectcss.__wab_text,
-            sty.h2
-          )}
-          id={"contact"}
-        >
-          {hasVariant(globalVariants, "screen", "mobileOnly")
-            ? "Ready to get your business out \nthere?"
-            : "Ready to work together?"}
-        </h2>
+        <div className={classNames(projectcss.all, sty.freeBox__zMb6B)}>
+          <h2
+            data-plasmic-name={"h2"}
+            data-plasmic-override={overrides.h2}
+            className={classNames(
+              projectcss.all,
+              projectcss.h2,
+              projectcss.__wab_text,
+              sty.h2
+            )}
+            id={"contact"}
+          >
+            {hasVariant(globalVariants, "screen", "mobileOnly")
+              ? "Ready to get your business out \nthere?"
+              : "sad"}
+          </h2>
+          <div className={classNames(projectcss.all, sty.freeBox___9PgMa)} />
+        </div>
         <div className={classNames(projectcss.all, sty.freeBox__emnmv)}>
           <PlasmicLink__
             data-plasmic-name={"link"}

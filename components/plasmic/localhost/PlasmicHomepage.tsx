@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import NavigationBar from "../../NavigationBar"; // plasmic-import: 7P2gVmn4xlJ3/component
+import { MuiSelect } from "../../../../components/MuiSelect"; // plasmic-import: eDMOuuYpWQ-K/codeComponent
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import ProjectCard from "../../ProjectCard"; // plasmic-import: NbMbua414n9v/component
 import ContactSection from "../../ContactSection"; // plasmic-import: 8hweSnSh0PAv/component
@@ -94,6 +95,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   services?: Flex__<"section">;
+  muiSelect?: Flex__<typeof MuiSelect>;
   work?: Flex__<"section">;
   about?: Flex__<"section">;
   testimonials?: Flex__<"section">;
@@ -218,7 +220,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.h1
                   )}
                 >
-                  {"HELLO WORLDS!"}
+                  {"HELLO asd WORLDS!"}
                 </h1>
                 <div
                   className={classNames(
@@ -273,6 +275,20 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {"Services"}
               </div>
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))([
+                2, 3, 4
+              ]).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <MuiSelect
+                    data-plasmic-name={"muiSelect"}
+                    data-plasmic-override={overrides.muiSelect}
+                    className={classNames("__wab_instance", sty.muiSelect)}
+                    key={currentIndex}
+                  />
+                );
+              })}
               <h2
                 className={classNames(
                   projectcss.all,
@@ -281,7 +297,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h2__cfsY6
                 )}
               >
-                {"Embracing constraints to push the boundaries."}
+                {"HELLO WORLS"}
               </h2>
             </div>
             <Stack__
@@ -1225,6 +1241,7 @@ const PlasmicDescendants = {
     "h1",
     "link",
     "services",
+    "muiSelect",
     "work",
     "about",
     "testimonials",
@@ -1236,7 +1253,8 @@ const PlasmicDescendants = {
   mainTextContainer: ["mainTextContainer", "h1"],
   h1: ["h1"],
   link: ["link"],
-  services: ["services"],
+  services: ["services", "muiSelect"],
+  muiSelect: ["muiSelect"],
   work: ["work"],
   about: ["about"],
   testimonials: ["testimonials"],
@@ -1254,6 +1272,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   link: "a";
   services: "section";
+  muiSelect: typeof MuiSelect;
   work: "section";
   about: "section";
   testimonials: "section";
@@ -1327,6 +1346,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     link: makeNodeComponent("link"),
     services: makeNodeComponent("services"),
+    muiSelect: makeNodeComponent("muiSelect"),
     work: makeNodeComponent("work"),
     about: makeNodeComponent("about"),
     testimonials: makeNodeComponent("testimonials"),
